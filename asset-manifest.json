@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/tic-tac-toe/static/css/main.fa7cfb4e.css",
+    "main.js": "/tic-tac-toe/static/js/main.baca8303.js",
+    "static/js/453.e036e8b5.chunk.js": "/tic-tac-toe/static/js/453.e036e8b5.chunk.js",
+    "static/media/soundGameWin-.wav": "/tic-tac-toe/static/media/soundGameWin-.8b89e537f689b1c42e2c.wav",
+    "static/media/mixkit-achievement-bell-600.wav": "/tic-tac-toe/static/media/mixkit-achievement-bell-600.fe95e484c435a6154d9c.wav",
+    "static/media/logo.svg": "/tic-tac-toe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/tic-tac-toe/index.html",
+    "main.fa7cfb4e.css.map": "/tic-tac-toe/static/css/main.fa7cfb4e.css.map",
+    "main.baca8303.js.map": "/tic-tac-toe/static/js/main.baca8303.js.map",
+    "453.e036e8b5.chunk.js.map": "/tic-tac-toe/static/js/453.e036e8b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa7cfb4e.css",
+    "static/js/main.baca8303.js"
+  ]
+}
