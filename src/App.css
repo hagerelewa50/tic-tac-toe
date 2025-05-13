@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  color: #fff;
+  background-color: #23272f;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 50px;
+  text-align: center;
+
+}
+.board{
+ 
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  gap: 5px;
+  background-color: #0074a6;
+ cursor: pointer;
+ position: relative;
+
+}
+.tile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  font-size: 2em;
+background-color: #23272f;;
+
+}
+.x-hover:hover::after{
+  content: "x";
+  opacity: 0.4;
+}
+.o-hover:hover::after{
+  content: "o";
+  opacity: 0.4;
+}
+.strike{
+  position: absolute;
+  background-color: darkorange;
+}
+.strike-row-1{
+  width: 100%;
+  height: 4px;
+  top: 16%;
+  animation: flash1 1s infinite;
+}
+.strike-row-2{
+  width: 100%;
+  height: 4px;
+  top: 49%;
+  animation: flash1 1s infinite;
+}
+.strike-row-3{
+  width: 100%;
+  height: 4px;
+  top: 84%;
+  animation: flash1 1s infinite;
+}
+.strike-column-1{
+  height: 100%;
+  width: 4px;
+  left: 16%;
+  animation: flash 1s infinite;
+}
+
+.strike-column-2{
+  height: 100%;
+  width: 4px;
+  left: 49%;
+  animation: flash 1s infinite;
+}
+
+.strike-column-3{
+  height: 100%;
+  width: 4px;
+  left: 83%;
+  animation: flash 1s infinite;
+}
+.strike-dialonge-1{
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+  animation: flash 1s infinite;
+}
+
+.strike-dialonge-2{
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+  animation: flash2 1s infinite;
+}
+
+@keyframes flash1 {
+  0% { transform:  scale(1); background-color: #ffbebe; }
+  50% { transform:  scale(1.1); background-color: #f3866a; }
+  100% { transform:  scale(1); background-color: #ffd5d5; }
+}
+@keyframes flash {
+  0% { transform: skewY(45deg) scale(1); background-color: #ffbebe; }
+  50% { transform: skewY(45deg) scale(1.1); background-color: #f3866a; }
+  100% { transform: skewY(45deg) scale(1); background-color: #ffd5d5; }
+}
+@keyframes flash2 {
+  0% { transform: skewY(-45deg) scale(1); background-color: #ffbebe; }
+  50% { transform: skewY(-45deg) scale(1.1); background-color: #f3866a; }
+  100% { transform: skewY(-45deg) scale(1); background-color: #ffd5d5; }
+}
+
+.game-over{
+  text-align: center;
+  border: #0074a6 8px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+font-size: 1.5em;
+}
+
+.play-again{
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #0074a6;
   color: white;
+  width: 100%;
+  font-size: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
